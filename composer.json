@@ -1,0 +1,48 @@
+{
+    "name": "phpnomad/gettext-integration",
+    "description": "PHPNomad gettext translation strategy implementation",
+    "version": "1.0.0",
+    "type": "library",
+    "homepage": "https://github.com/phpnomad/gettext-integration",
+    "readme": "README.md",
+    "license": "MIT",
+    "scripts": {
+        "php-cs-fixer": "php-cs-fixer fix"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../translate"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PHPNomad\\Gettext\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPNomad\\Gettext\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Standiford",
+            "email": "alex@standiford.us"
+        }
+    ],
+    "require": {
+        "phpnomad/translate": "^2.0",
+        "ext-gettext": "*"
+    },
+    "require-dev": {
+        "phpnomad/tests": "^0.1.0 || ^0.3.0",
+        "phpunit/phpunit": "^9.6",
+        "mockery/mockery": "^1.5"
+    },
+    "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    }
+}
